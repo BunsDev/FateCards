@@ -1,0 +1,581 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.shine {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: shine 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.sparkle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: sparkle 1s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0.0;
+    }
+
+    40% {
+        opacity: 0.00;
+    }
+
+    55% {
+        opacity: 0.50;
+    }
+
+    65% {
+        opacity: 0.60;
+    }
+
+    75% {
+        opacity: 0.70;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ImageDisplay.css */
+.image-display-container {
+    width: calc(15vw - 127px);
+    height: auto;
+    padding: 10px;
+    background-color: #ffffff80;
+    /* Golden background */
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin: 5%;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+}
+
+
+.image-display {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.headingHeld {
+    text-align: center;
+    color: rgb(255, 251, 0);
+    /* Red text */
+    font-size: 2em;
+    font-weight: bold;
+    /* Make text bold */
+    background-color: #a200ff91;
+    /* Goldenish background */
+    margin-top: 50px;
+}
+
+.upHead {
+    font-size: 2.5em;
+    /* Large size */
+    font-weight: bold;
+    /* Bold text */
+    margin-bottom: 10px;
+    /* Adds space below the headings */
+}
+
+
+.revealImage {
+    padding-top: 10%;
+    height: 60vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* General container for trades and exchangeable fates */
+
+
+.trades-container {
+    display: flex;
+    flex-direction: row;
+    /* Arrange children in a row */
+    justify-content: space-between;
+    /* Distribute space evenly between children */
+    flex-wrap: wrap;
+    /* Allow items to wrap onto the next line if they don't fit */
+    gap: 20px;
+    /* Adds space between child elements */
+    margin: 2% 10%;
+    color: #00ff4c;
+    /* Goldenish color for text */
+}
+
+/* Ensure the container takes up the full height of the viewport */
+.trades-container {
+    height: 100vh;
+}
+
+
+.exchangeableFates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers children horizontally */
+    justify-content: center;
+    /* Centers children vertically */
+    gap: 20px;
+    /* Adds space between child elements */
+    width: 100%;
+    /* Ensures the container takes up the full width */
+    /* max-width: 1200px; */
+    /* Optional: Limits maximum width for large screens */
+    margin: 0 auto;
+    /* Centers the container horizontally */
+    padding: 20px;
+    /* Adds padding around the content */
+    background-color: rgba(90, 88, 236, 0.418);
+}
+
+.uptradeform {
+    background-color: rgba(90, 88, 236, 0.418);
+    /* Translucent Pink */
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    /* Adjust based on content and design preference */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: Adds shadow for depth */
+    margin-right: 20px;
+    /* Adds space to the right of each form */
+    margin-bottom: 20px;
+    /* Adds space below each form */
+}
+
+.uptradeform input {
+    color: black;
+    /* Ensures the text inside the input box is black */
+}
+
+.uptradeform input::placeholder {
+    color: black;
+    /* Ensures the placeholder text is black */
+}
+
+.upTradeInput {
+    text-align: center;
+}
+
+.upTradeButton {
+    background-color: #00008B;
+    border-radius: 12px;
+    /* Dark Blue */
+    color: white;
+    /* Text color for contrast */
+    border: none;
+    /* Removes default button borders */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+/* Hover effect */
+.upTradeButton:hover {
+    background-color: #00688B;
+    /* Slightly lighter shade of dark blue on hover */
+}
+
+
+
+.uptradeform.tradeForm {
+    display: block;
+    /* Makes the form take up the full width and start on a new line */
+    width: 100%;
+    /* Ensures the form fills the available width */
+}
+
+.uptradeform label,
+.uptradeform input,
+.uptradeform button {
+    border-radius: 12px;
+    display: block;
+    /* Stacks these elements vertically */
+    width: 100%;
+    /* Takes up the full width of the form */
+    margin-bottom: 10px;
+    /* Adds some space between elements */
+}
+
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+select option {
+    display: flex;
+    align-items: center;
+}
+
+select option img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Custom Dropdown */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.dropdown-selected {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-option {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-option img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+}
+
+/* TradeForShowCard */
+.trade-for-show-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23vw;
+    /* increased width */
+}
+
+.player-address,
+.trade-id {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+    word-break: break-word;
+    /* to ensure long addresses break into the next line */
+}
+
+.card-images {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+}
+
+.card-image {
+    max-width: 100px;
+    max-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Container to hold multiple cards */
+.trades-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    /* ensure the cards are centered */
+}
+
+/* trade-display.css */
+.trade-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    /* Slightly smaller container */
+    padding: 10px;
+    /* Smaller padding */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 249, 0.7);
+    /* Translucent white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f0f0f0ab;
+}
+
+.images-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    /* Adjust the background color if needed */
+    /* background-color: #f0f0f0ab; */
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-wrapper img {
+    height: auto;
+}
+
+.image-wrapper p {
+    font-weight: bold;
+    font-size: 1rem;
+    /* Adjusted font size */
+}
+
+
+.image-wrapper img {
+    width: 30%;
+    /* Larger images */
+    height: 30%;
+    /* Larger images */
+}
+
+.image-wrapper p {
+    margin: 5px 0 0;
+}
+
+.back-button {
+    border-radius: 12px;
+    background-color: rgba(128, 0, 128, 0.5);
+    /* Purplish translucent background */
+    color: white;
+    /* White text */
+    padding: 10px 20px;
+    /* Padding to create distance from top and left ends */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-top: 20px;
+    /* Distance from the top */
+    margin-left: 5%;
+    /* Distance from the top */
+    cursor: pointer;
+    /* Cursor style */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+/* Hover effect */
+.back-button:hover {
+    background-color: rgba(139, 0, 139, 0.8);
+    /* Darker purplish translucent background on hover */
+}
+
+/* MyComponent.module.css */
+.reveal-button {
+    cursor: pointer;
+}
+
+.darkened img {
+    filter: brightness(0.5);
+    /* Adjust the value as needed */
+}
+
+.tradeButton {
+    border-radius: 12px;
+    background-color: #A9A9A9;
+    /* Dark Bluish Grey */
+    color: white;
+    /* White text */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+/* Hover effect */
+.tradeButton:hover {
+    background-color: #808080;
+    /* Slightly darker grey on hover */
+}
+
+/* Trade display container */
+
+
+/* Trade form container */
+.tradeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 123, 255, 0.692);
+    /* Translucent Blue Background */
+    padding: 20px;
+    /* Adds padding around the content */
+    border-radius: 3px;
+    /* Rounds the corners of the form */
+    width: 50%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.userTrade {
+    left: 7%;
+}
+
+.basicTrade {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* padding: 20px; */
+    /* Adds padding around the content */
+    border-radius: 3px;
+    /* Rounds the corners of the form */
+    width: 30%;
+    position: absolute;
+    top: 75%;
+    /* transform: translate(-50%, -50%); */
+}
+
+.otherUserTrade {
+    left: 62%;
+}
+
+/* Confirm and cancel buttons container */
+.confirmCancelButtons {
+    display: flex;
+    border-radius: 12px;
+    justify-content: center;
+    margin-top: 23%;
+}
+
+/* Trade button styles */
+.tradeButton {
+    border-radius: 12px;
+    background-color: #A9A9A9;
+    /* Dark Bluish Grey */
+    color: white;
+    /* White text */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+    margin: 0 10px;
+    /* Margin between buttons */
+}
+
+/* Hover effect */
+.tradeButton:hover {
+    background-color: #808080;
+    /* Slightly darker grey on hover */
+}
+
+/* Input field styles */
+#address {
+    width: 100%;
+    /* Set input width to 100% */
+    padding: 10px;
+    /* Padding */
+    margin: 10px 0;
+    /* Margin */
+    border-radius: 3px;
+    /* Rounded corners */
+    /* border: 1px solid #ccc; Border */
+}
+
+.tradeConfirmText {
+    display: flex;
+    justify-content: center;
+    margin-top: 23%;
+    font-weight: bold;
+    color: #808080;
+    /* Greyish */
+    font-size: 2rem;
+    /* Adjust based on your preference for 'big enough' */
+}

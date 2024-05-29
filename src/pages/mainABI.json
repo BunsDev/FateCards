@@ -1,0 +1,405 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_cardContract",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_nftContract",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "Main__AlreadyInATrade",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "Main__AlredyLoggedInToday",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "Main__CardNotInPossession",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "Main__CardNotValid",
+		"type": "error"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"name": "OwnableInvalidOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "OwnableUnauthorizedAccount",
+		"type": "error"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "cancelTrade",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "confirmTrade",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "getLatestCard",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "lastClaim",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "putDownATrade",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "revealFate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_having",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_for",
+				"type": "uint256"
+			}
+		],
+		"name": "showATrade",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "showAllUpTrades",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "player",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cardId1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cardId2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tradeId",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Main.TradeForShow[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_otherPlayer",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_for",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_having",
+				"type": "uint256"
+			}
+		],
+		"name": "trade",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "trades",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "user1",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "user2",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "cardId1",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "cardId2",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "confirm",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "upTrades",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "player",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "cardId1",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "cardId2",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tradeId",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "viewTrade",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "user1",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "user2",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cardId1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cardId2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "confirm",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct Main.Trade",
+				"name": "",
+				"type": "tuple"
+			},
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "user1",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "user2",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cardId1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cardId2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "confirm",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct Main.Trade",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
