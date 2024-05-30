@@ -16,11 +16,11 @@ import "@chainlink/contracts/src/v0.8/KeeperCompatibleInterface.sol";
 contract Luck is VRFConsumerBaseV2, KeeperCompatibleInterface {
     VRFCoordinatorV2Interface internal COORDINATOR;
     LinkTokenInterface internal LINKTOKEN;
-
+// Fill the necessary values here according to the chain
     uint64 internal s_subscriptionId = 1;
-    address internal vrfCoordinator = 0x5F9f8D15d9c0e5aa19C1d1e1C8F4DE2B72db7652;
-    address internal link_token_contract = 0x01BE23585060835E02B77ef475b0Cc51aA1e0709;
-    bytes32 internal keyHash = 0x6c3699283bda56ad74f6b855546325b68d482e983852a5ed026aab5169f8f6c8;
+    address internal vrfCoordinator = ;
+    address internal link_token_contract = ;
+    bytes32 internal keyHash = ;
     uint32 internal callbackGasLimit = 100000;
     uint16 internal requestConfirmations = 3;
     uint32 internal numWords = 1;
