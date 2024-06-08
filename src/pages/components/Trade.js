@@ -109,7 +109,7 @@ export default function Trade({ cardContract, mainContract }) {
                 <div className="tradeForm">
                     <form id="myForm">
                         <div>
-                            <label htmlFor="address">Other Player's address:  </label>
+                            <label htmlFor="address">Other Player Address:  </label>
                         </div>
                         <div>
                             <input
